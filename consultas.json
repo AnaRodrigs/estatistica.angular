@@ -11,6 +11,24 @@
       "sucessos": 32,
       "tentativas": 10,
       "probabilidade": 320
+    },
+    {
+      "id": 3,
+      "sucessos": 212,
+      "tentativas": 342,
+      "probabilidade": 61.98830409356725
+    },
+    {
+      "sucessos": 21,
+      "tentativas": 10,
+      "probabilidade": 210,
+      "id": 4
+    },
+    {
+      "sucessos": 15,
+      "tentativas": 2,
+      "probabilidade": 750,
+      "id": 5
     }
   ]
 }

@@ -22,6 +22,14 @@
       "sucessosB": 311,
       "tentativasB": 22,
       "probabilidadeCondicional": 14.136363636363635
+    },
+    {
+      "id": 1714754649295,
+      "sucessosA": 21,
+      "tentativasA": 21,
+      "sucessosB": 23,
+      "tentativasB": 2323,
+      "probabilidadeCondicional": 0.009900990099009901
     }
   ]
 }
