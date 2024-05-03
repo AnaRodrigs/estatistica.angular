@@ -1,9 +1,16 @@
 {
   "probabilidade": [
     {
-      "sucessos": 5,
+      "id": 1,
+      "sucessos": 21,
+      "tentativas": 11,
+      "probabilidade": 190.9090909090909
+    },
+    {
+      "id": 2,
+      "sucessos": 32,
       "tentativas": 10,
-      "probabilidade": 0.5
+      "probabilidade": 320
     }
   ]
 }

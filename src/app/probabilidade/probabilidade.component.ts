@@ -11,8 +11,7 @@ export class ProbabilidadeComponent implements OnInit {
   tentativas: number | null = null;
   probabilidade: number | null = null;
   consultasAnteriores: { id: number, sucessos: number, tentativas: number, probabilidade: number }[] = [];
-
-
+  proximoId: number = 1; 
   constructor(private http: HttpClient){
 
   }
@@ -31,22 +30,23 @@ export class ProbabilidadeComponent implements OnInit {
   adicionarConsulta(): void {
     if (this.sucessos !== null && this.tentativas !== null && this.probabilidade !== null) {
       const novaConsulta = {
+        id: this.proximoId++,
         sucessos: this.sucessos,
         tentativas: this.tentativas,
         probabilidade: this.probabilidade
       };
-      this.http.post<{ id: number, sucessos: number, tentativas: number, probabilidade: number }>('http://localhost:3000/probabilidade', novaConsulta)
-        .subscribe(response => {
-          this.consultasAnteriores.unshift({ id: response.id, ...novaConsulta });
+      
+      this.http.post('http://localhost:3000/probabilidade', novaConsulta)
+        .subscribe(() => {
+          this.consultasAnteriores.unshift(novaConsulta);
         });
     }
   }
-
   carregarConsultas(): void {
-    this.http.get<{ id: number, sucessos: number, tentativas: number, probabilidade: number }[]>('http://localhost:3000/probabilidade')
-      .subscribe(consultas => {
-        this.consultasAnteriores = consultas;
-      });
+    const consultasString = localStorage.getItem('consultas');
+    if (consultasString) {
+      this.consultasAnteriores = JSON.parse(consultasString);
+    }
   }
   salvarConsultas(): void {
     this.http.put('/assets/consultas.json', this.consultasAnteriores)
@@ -54,9 +54,16 @@ export class ProbabilidadeComponent implements OnInit {
   }
   
   deletarConsulta(id: number): void {
+    this.consultasAnteriores = this.consultasAnteriores.filter(consulta => consulta.id !== id);
+    // Atualizar o armazenamento local após excluir a consulta
+    localStorage.setItem('consultas', JSON.stringify(this.consultasAnteriores));
+
+    // Deletar do servidor JSON
     this.http.delete(`http://localhost:3000/probabilidade/${id}`)
       .subscribe(() => {
-        this.consultasAnteriores = this.consultasAnteriores.filter(consulta => consulta.id !== id);
+        console.log('Consulta deletada:', id);
+      }, error => {
+        console.error('Erro ao deletar consulta:', error);
       });
   }
 }
