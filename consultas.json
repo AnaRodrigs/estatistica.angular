@@ -1,0 +1,9 @@
+{
+  "probabilidade": [
+    {
+      "sucessos": 5,
+      "tentativas": 10,
+      "probabilidade": 0.5
+    }
+  ]
+}

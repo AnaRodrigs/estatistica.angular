@@ -1,0 +1,11 @@
+{
+  "condicional": [
+    {
+      "sucessosA": 3,
+      "tentativasA": 5,
+      "sucessosB": 2,
+      "tentativasB": 5,
+      "probabilidadeCond": 0.4
+    }
+  ]
+}
