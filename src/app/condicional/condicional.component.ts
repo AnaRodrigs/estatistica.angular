@@ -33,7 +33,7 @@ export class CondicionalComponent implements OnInit {
     if (this.sucessosA !== null && this.tentativasA !== null && this.sucessosB !== null && this.tentativasB !== null && this.tentativasA > 0 && this.tentativasB > 0) {
       const probabilidadeA = this.sucessosA / this.tentativasA;
       const probabilidadeB = this.sucessosB / this.tentativasB;
-      this.probabilidadeCondicional = (probabilidadeA * probabilidadeB) / probabilidadeA;
+      this.probabilidadeCondicional = (probabilidadeA * probabilidadeB) / probabilidadeA ;
       this.adicionarConsulta();
     } else {
       this.probabilidadeCondicional = null;
