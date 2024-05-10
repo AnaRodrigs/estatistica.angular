@@ -17,28 +17,12 @@
       "probabilidadeCondicional": 14.136363636363635
     },
     {
-      "id": 1714755919792,
-      "sucessosA": 112,
-      "tentativasA": 11,
-      "sucessosB": 142,
-      "tentativasB": 11,
-      "probabilidadeCondicional": 12.909090909090908
-    },
-    {
-      "id": 1714756053633,
-      "sucessosA": 1112,
-      "tentativasA": 112,
-      "sucessosB": 234,
-      "tentativasB": 111,
-      "probabilidadeCondicional": 210.81081081081078
-    },
-    {
-      "id": 1714756312829,
-      "sucessosA": 11111,
-      "tentativasA": 11,
-      "sucessosB": 222,
-      "tentativasB": 22,
-      "probabilidadeCondicional": 10.090909090909092
+      "id": 1715361321611,
+      "sucessosA": 12,
+      "tentativasA": 12,
+      "sucessosB": 12,
+      "tentativasB": 12,
+      "probabilidadeCondicional": 1
     }
   ]
 }

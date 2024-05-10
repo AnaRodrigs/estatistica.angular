@@ -19,28 +19,22 @@
       "id": 8
     },
     {
-      "sucessos": 1112,
-      "tentativas": 112,
-      "probabilidade": 992.8571428571429,
+      "sucessos": 200,
+      "tentativas": 12,
+      "probabilidade": 1666.6666666666667,
+      "id": 9
+    },
+    {
+      "sucessos": 200,
+      "tentativas": 12,
+      "probabilidade": 1666.6666666666667,
       "id": 10
     },
     {
-      "sucessos": 11,
-      "tentativas": 11,
-      "probabilidade": 100,
-      "id": 12
-    },
-    {
-      "sucessos": 15,
-      "tentativas": 3,
-      "probabilidade": 500,
-      "id": 13
-    },
-    {
-      "sucessos": 89,
-      "tentativas": 9,
-      "probabilidade": 988.8888888888889,
-      "id": 14
+      "sucessos": 10,
+      "tentativas": 100,
+      "probabilidade": 10,
+      "id": 11
     }
   ]
 }

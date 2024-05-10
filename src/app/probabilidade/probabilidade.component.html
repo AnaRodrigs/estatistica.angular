@@ -14,7 +14,9 @@
   
   <button class="btn btn-primary" (click)="calcularProbabilidade()">Calcular Probabilidade</button>
   
-  <p class="mt-3" *ngIf="probabilidade !== null">Probabilidade: {{ probabilidade | number:'1.2-2' }}</p>
+  <p class="mt-3" *ngIf="probabilidade !== null">Probabilidade: {{ probabilidade | number:'1.2-2' }} </p>
+  <p *ngIf="probabilidade !== null">Porcentagem: {{ probabilidade.toFixed(2) }}%</p>
+
 
   <h2 class="mt-5">Consultas Anteriores</h2>
   <ul class="list-group">
